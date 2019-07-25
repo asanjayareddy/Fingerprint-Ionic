@@ -1,0 +1,132 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title >CoMakeIT Demo App</ion-title>
+      <ion-icon name="log-out" slot="end" size="large" (click)="logout()" *ngIf="isUserLoggedIn"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-card>
+          <ion-card-content class="no-padding">
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-slides pager="true" [options]="slideOpts">
+                    <ion-slide *ngFor="let imageUrl of imageUrls"> 
+                        <img src="./assets/images/{{imageUrl}}">
+                    </ion-slide>
+                  </ion-slides>
+                </ion-col>
+              </ion-row> 
+            </ion-grid> 
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-content>
+               <ion-grid>
+                   <ion-row>
+                       <ion-col text-center>
+                           <ion-icon
+                           name="microphone"
+                           class="center-img"
+                           color="primary"> </ion-icon>
+                       
+                         <ion-label class="label-text"> Events </ion-label>
+                       </ion-col>
+                       <ion-col text-center>
+                         <ion-icon
+                           name="today"
+                           class="center-img"
+                           color="primary"
+                         ></ion-icon>
+                         <ion-label class="label-text"> Company News </ion-label>
+                       </ion-col>
+                       <ion-col text-center>
+                         <ion-icon
+                           name="star"
+                           class="center-img"
+                           color="primary"
+                         ></ion-icon>
+                         <ion-label class="label-text"> Appreciations </ion-label>
+                       </ion-col>
+                     </ion-row>
+   
+                   </ion-grid>
+            </ion-card-content>
+          </ion-card>
+
+        <ion-card>
+            <ion-card-content>
+               <ion-grid>
+                   <ion-row>
+                       <ion-col text-center>
+                           <ion-icon
+                           name="add-circle"
+                           class="center-img"
+                           color="primary"
+                         ></ion-icon>
+                       
+                         <ion-label class="label-text"> Apply Leave </ion-label>
+                       </ion-col>
+                       <ion-col text-center>
+                         <ion-icon
+                           name="time"
+                           class="center-img"
+                           color="primary"
+                         ></ion-icon>
+                         <ion-label class="label-text"> Regularization </ion-label>
+                       </ion-col>
+                       <ion-col text-center>
+                         <ion-icon
+                           name="cash"
+                           class="center-img"
+                           color="primary"
+                         ></ion-icon>
+                         <ion-label class="label-text"> Expense Claims </ion-label>
+                       </ion-col>
+                     </ion-row>
+   
+                   </ion-grid>
+            </ion-card-content>
+     
+       </ion-card>
+
+       <ion-card>
+          <ion-card-content>
+             <ion-grid>
+                 <ion-row>
+                     <ion-col text-center>
+                         <ion-icon
+                         name="people"
+                         class="center-img"
+                         color="primary"> </ion-icon>
+                     
+                       <ion-label class="label-text"> HR </ion-label>
+                     </ion-col>
+                     <ion-col text-center>
+                       <ion-icon
+                         name="microphone"
+                         class="center-img"
+                         color="primary"
+                       ></ion-icon>
+                       <ion-label class="label-text"> Finance </ion-label>
+                     </ion-col>
+                     <ion-col text-center>
+                       <ion-icon
+                         name="tv"
+                         class="center-img"
+                         color="primary"
+                       ></ion-icon>
+                       <ion-label class="label-text"> IT </ion-label>
+                     </ion-col>
+                   </ion-row>
+ 
+                 </ion-grid>
+          </ion-card-content>
+        </ion-card>
+  </ion-content>
+  

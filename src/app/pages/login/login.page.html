@@ -1,0 +1,35 @@
+<ion-content>
+
+  <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <!-- <h4 color="primary">CoMakeIT</h4> -->
+            <ion-img src="./assets/images/comakeit-logo.png"></ion-img>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input type="text" placeholder="Username"  [(ngModel)]="userName"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+              <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+          </div> 
+    
+          <div padding>
+            <ion-button color="primary" size="large" (click)="login()" expand="block">Login</ion-button>
+          </div>
+
+          <div padding text-center *ngIf="currentUser !== undefined">
+            <ion-label color="secondary" bold> -- OR -- </ion-label>
+          </div>
+
+          <div padding text-center *ngIf="currentUser !== undefined">
+            <ion-button  color="primary" size="large" (click)="loginWithFingerprint()"  expand="block"><ion-icon name="finger-print"></ion-icon> Login with Fingerprint </ion-button>
+            
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

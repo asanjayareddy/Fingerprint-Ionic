@@ -1,0 +1,7 @@
+{
+  "name": "CoMakeIT",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
